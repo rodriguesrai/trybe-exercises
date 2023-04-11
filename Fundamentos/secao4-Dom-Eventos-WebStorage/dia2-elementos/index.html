@@ -1,0 +1,43 @@
+<!-- arquivo index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="parent-of-parent">
+        <section id="parent">
+            <section id="first-child"></section>
+            <section id="where-are-you">
+                <section id="first-child-of-child"></section>
+            </section>
+            Attention!
+            <section id="third-child"></section>
+            <section id="fourth-and-last-child"></section>
+        </section>
+    </main>
+    <script>
+        const whereAreYou = document.getElementById('where-are-you');
+        const parent = whereAreYou.parentElement;
+        parent.style.color = 'red';
+
+        const firstChildOfChild = whereAreYou.firstElementChild;
+        firstChildOfChild.innerText = 'First child of child';
+        const firstChild = whereAreYou.firstElementChild;
+        firstChildOfChild.innerText = 'First child of child';
+        const firstChild1 = parent.firstElementChild;
+        const primeiroFilho2 = whereAreYou.previousElementSibling;
+        const textElement = whereAreYou.nextSibling;
+        const thirdChild = whereAreYou.nextElementSibling;
+        const thirdChild2 = parent.lastElementChild.previousElementSibling;
+
+    </script>
+</body>
+
+</html>
