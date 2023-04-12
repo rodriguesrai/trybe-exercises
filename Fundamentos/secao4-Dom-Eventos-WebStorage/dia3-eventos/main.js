@@ -6,10 +6,21 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 
 // 1. Copie esse arquivo e edite apenas ele.
-// 1.1. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
+// 1.1. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre? 
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando este for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como é possível fazer isso? Dica: Lembre-se do método `.classList.remove`.
+
+const addClass = event => {
+    const liTech = document.querySelector('.tech');
+    liTech.classList.remove('tech');
+    event.target.classList.add('tech');
+    input.value = ''; // não faço ideia
+}
+
+firstLi.addEventListener('click', addClass);
+secondLi.addEventListener('click', addClass);
+thirdLi.addEventListener('click', addClass);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech'.
@@ -24,10 +35,10 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // Segue abaixo um exemplo de uso do event.target.
 
 const resetText = (event) => {
-  // O event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
-  // O event possui várias propriedades, porém a mais usada é o event.target,
-  // que retorna o objeto que disparou o evento.
+    // O event é passado como um parâmetro para a função.
+    event.target.innerText = 'Opção reiniciada';
+    // O event possui várias propriedades, porém a mais usada é o event.target,
+    // que retorna o objeto que disparou o evento.
 }
 
 firstLi.addEventListener('dblclick', resetText);
