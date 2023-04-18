@@ -24,6 +24,10 @@ thirdLi.addEventListener('click', addClass);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech'.
+input.addEventListener('input', (event) => {
+    const techElement = document.querySelector('.tech');
+    techElement.innerText = event.target.value;
+});
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy',
 // redirecione para alguma página.
