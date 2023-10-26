@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<main id="paiDoPai">
+    <section id="pai">
+        <section id="primeiroFilho"></section>
+        <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+        </section>
+        Atenção!
+        <section id="terceiroFilho"></section>
+        <section id="quartoEUltimoFilho"></section>
+    </section>
+</main>
+
+<script>
+    const requisitoUm = document.getElementById('pai');
+    let irmaoParaUm = document.createElement('section');
+    irmaoParaUm.id = 'irmaoElementoOndeVoceEsta'; // porque não funciona sem essa linha?
+    requisitoUm.appendChild(irmaoParaUm);
+
+    const filhoParaOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+    let filhoDeOndeVoceEsta = document.createElement('section');
+    filhoDeOndeVoceEsta.id = 'filhoDeElementoOndeVoceEsta';
+    filhoParaOndeVoceEsta.appendChild(filhoDeOndeVoceEsta);
+
+    const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+    let filhoDoFilhoDoFilho = document.createElement('section');
+    filhoDoFilhoDoFilho.id = 'primeiroFilhoDoFilhoDoFilho'
+    primeiroFilhoDoFilho.appendChild(filhoDoFilhoDoFilho);
+
+    const chegaNaoAguentoMais = primeiroFilhoDoFilhoDoFilho
+    chegaNaoAguentoMais.parentElement.parentElement.nextElementSibling
+    console.log(chegaNaoAguentoMais);
+    
+</script>
+
+</html>
