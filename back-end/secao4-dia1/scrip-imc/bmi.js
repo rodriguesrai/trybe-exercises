@@ -23,6 +23,6 @@ const main = () => {
   console.log(`Your BMI is ${bmi.toFixed(2)}`);
   console.log(`Classification: ${classification}`);
 }
-main();
+
 module.exports = main;
 
