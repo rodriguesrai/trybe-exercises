@@ -1,0 +1,1 @@
+const bmi = require('./bmi');
