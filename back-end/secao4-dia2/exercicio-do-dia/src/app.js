@@ -69,5 +69,18 @@ app.put('/movies/:id', async (req, res) => {
   }
 });
 
+app.delete('/movies/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const movies = await readFile();
+    const movieIndex = movies.findIndex((movies1) => movies1.id === Number(id));
+    movies.splice(movieIndex, 1);
+    const updatedMovies = JSON.stringify(movies, null, 2);
+    await fs.writeFile(moviesPath, updatedMovies);
+    res.status(200).json({ message: 'Filme excluído com sucesso!' });
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+});
 
 module.exports = app;
