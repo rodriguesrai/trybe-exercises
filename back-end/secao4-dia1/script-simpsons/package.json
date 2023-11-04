@@ -1,0 +1,15 @@
+{
+  "name": "script-simpsons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simpsons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node simpsons.js"
+  },
+  "author": "Raí",
+  "license": "ISC",
+  "dependencies": {
+    "@trybe/eslint-config-frontend": "^1.11.4"
+  }
+}
