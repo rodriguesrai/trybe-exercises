@@ -7,10 +7,11 @@ var validEmail = 'user1@email.com';
 var noPasswordLoginBody = { email: validEmail, password: '' };
 var notExistingUserBody = { email: 'notfound@email.com', password: validPassword };
 var existingUserWithWrongPasswordBody = { email: validEmail, password: 'wrong_password' };
+var hashedPassword = '$2a$10$lQGsGScdxhjGRuYVJX3PX.347IWLNiSk6hOiMmjxlzLEI32lg5LMW';
 var existingUser = {
     id: 1,
     email: validEmail,
-    password: validPassword,
+    password: hashedPassword,
     name: 'user1'
 };
 var validLoginBody = { email: validEmail, password: validPassword };
